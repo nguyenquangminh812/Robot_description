@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="delta">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.380382318022096 0.659302446320337 0.53352580397799"
+        rpy="0 0 0" />
+      <mass
+        value="156.162689770185" />
+      <inertia
+        ixx="7.59889681143528"
+        ixy="-0.000259409545019054"
+        ixz="-9.24660486503626E-05"
+        iyy="10.3617884952824"
+        iyz="-0.000102275137498669"
+        izz="7.59824264740178" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="upper_arm1">
+    <inertial>
+      <origin
+        xyz="0.114792252146981 0.00182152585989642 0.0495423331065886"
+        rpy="0 0 0" />
+      <mass
+        value="0.646884412038515" />
+      <inertia
+        ixx="0.000166776951356192"
+        ixy="-0.000187543246495443"
+        ixz="-4.04262175310626E-09"
+        iyy="0.00675559133337473"
+        iyz="6.15021017809258E-11"
+        izz="0.0067770914347623" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/upper_arm1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/upper_arm1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0.33287 -0.68352 0.39876"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="upper_arm1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="3.1416"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="lower_arm1">
+    <inertial>
+      <origin
+        xyz="-0.0385698304790184 -0.39544178438701 0.00404194034295746"
+        rpy="0 0 0" />
+      <mass
+        value="0.254921516517185" />
+      <inertia
+        ixx="0.0162920286981957"
+        ixy="0.000189885177234702"
+        ixz="1.84031632943999E-06"
+        iyy="9.64407003382144E-06"
+        iyz="-8.02478576529621E-05"
+        izz="0.0162956096134967" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/lower_arm1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/lower_arm1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_lower1"
+    type="continuous">
+    <origin
+      xyz="0.27257 0.024629 0.0052966"
+      rpy="-0.032509 1.1708 -2.6733" />
+    <parent
+      link="upper_arm1" />
+    <child
+      link="lower_arm1" />
+    <axis
+      xyz="0.55852 0 0.82949" />
+  </joint>
+  <link
+    name="upper_arm2">
+    <inertial>
+      <origin
+        xyz="0.114792221305797 -0.00182152765219995 0.184356660884915"
+        rpy="0 0 0" />
+      <mass
+        value="0.646884127953807" />
+      <inertia
+        ixx="0.000166777031838411"
+        ixy="0.000187543435284817"
+        ixz="4.36611667888656E-09"
+        iyy="0.00675559025398927"
+        iyz="7.91226247660783E-11"
+        izz="0.00677709036650217" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/upper_arm2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/upper_arm2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0.41708 -0.2971 0.39876"
+      rpy="1.5708 0 0.5236" />
+    <parent
+      link="base_link" />
+    <child
+      link="upper_arm2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="lower_arm2">
+    <inertial>
+      <origin
+        xyz="-0.10604454136627 -0.395444418379915 0.150775797854126"
+        rpy="0 0 0" />
+      <mass
+        value="0.254921517454707" />
+      <inertia
+        ixx="0.0162961667441607"
+        ixy="-4.65488458038641E-05"
+        ixz="-1.13364148076819E-06"
+        iyy="9.64408194592089E-06"
+        iyz="-0.000200822093659048"
+        izz="0.016291471722268" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/lower_arm2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/lower_arm2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_lower2"
+    type="continuous">
+    <origin
+      xyz="0.16127 0.034687 0.31426"
+      rpy="3.1286 0.22775 2.6404" />
+    <parent
+      link="upper_arm2" />
+    <child
+      link="lower_arm2" />
+    <axis
+      xyz="0.69905 0 -0.71508" />
+  </joint>
+  <link
+    name="upper_arm3">
+    <inertial>
+      <origin
+        xyz="0.114792190956305 -0.00182152531048957 -0.0251673198673808"
+        rpy="0 0 0" />
+      <mass
+        value="0.646883970811699" />
+      <inertia
+        ixx="0.000166776836705842"
+        ixy="0.000187543268799503"
+        ixz="3.21501578698103E-09"
+        iyy="0.00675558779094133"
+        iyz="3.68581727496335E-11"
+        izz="0.00677708810261762" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/upper_arm3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/upper_arm3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="0.26203 -0.43849 0.39876"
+      rpy="1.5708 0 2.618" />
+    <parent
+      link="base_link" />
+    <child
+      link="upper_arm3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="lower_arm3">
+    <inertial>
+      <origin
+        xyz="0.021338383297218 -0.286588309148518 -0.0278025254514155"
+        rpy="0 0 0" />
+      <mass
+        value="0.254921516970153" />
+      <inertia
+        ixx="0.0162945641029594"
+        ixy="-0.000125065677357419"
+        ixz="2.53738126565852E-06"
+        iyy="9.6440345659286E-06"
+        iyz="0.000163872021528037"
+        izz="0.0162930743247615" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/lower_arm3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/lower_arm3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_lower3"
+    type="continuous">
+    <origin
+      xyz="0.230483769451967 -0.125613066735207 0.0154970866079977"
+      rpy="0.0159234215285503 0.651825739186271 -0.488586704778935" />
+    <parent
+      link="upper_arm3" />
+    <child
+      link="lower_arm3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="target">
+    <inertial>
+      <origin
+        xyz="0 0.00734510079557033 2.69633426697169E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.207397112440021" />
+      <inertia
+        ixx="0.000172568881403432"
+        ixy="7.24231096618009E-20"
+        ixz="4.01870824578667E-19"
+        iyy="0.000277154102529209"
+        iyz="3.89811468943009E-13"
+        izz="0.00017256884108883" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/target.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://delta/meshes/target.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_targe"
+    type="fixed">
+    <origin
+      xyz="0.38037 -0.53352 -0.32514"
+      rpy="1.5708 0 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="target" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
