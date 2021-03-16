@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="arm_cachua">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="1.0927323858247 -0.686700374911266 0.878210293558317"
+        rpy="0 0 0" />
+      <mass
+        value="49.4805903270839" />
+      <inertia
+        ixx="11.5209337707897"
+        ixy="0.00410789115198139"
+        ixz="0.0178710713508414"
+        iyy="11.328909472299"
+        iyz="-0.0818380164177233"
+        izz="0.667865148013673" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_cachua/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_cachua/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0.607427868764121 0.572194737882173 -0.0293617820424991"
+        rpy="0 0 0" />
+      <mass
+        value="9.14159265358979" />
+      <inertia
+        ixx="0.0540508039409069"
+        ixy="0.00535901115247588"
+        ixz="-0.00205278300100913"
+        iyy="0.0854151878954083"
+        iyz="0.000338250493949397"
+        izz="0.0864441362382773" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_cachua/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_cachua/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="prismatic">
+    <origin
+      xyz="0.23491 -0.71189 0.25792"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.59204"
+      upper="0.55796"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="0.293377286672291 0.564548320108907 -0.0430513968148868"
+        rpy="0 0 0" />
+      <mass
+        value="38.0899693899575" />
+      <inertia
+        ixx="0.411420186478618"
+        ixy="0.0183838657000088"
+        ixz="-0.0983590256115223"
+        iyy="2.21115735519494"
+        iyz="0.00115897484317975"
+        izz="1.96540774365376" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_cachua/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_cachua/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="continuous">
+    <origin
+      xyz="0 0.15 0"
+      rpy="0 0.011092 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="0.286025454452601 0.564094530475619 0.0986213829126957"
+        rpy="0 0 0" />
+      <mass
+        value="22.319689898686" />
+      <inertia
+        ixx="0.39899835408147"
+        ixy="0.00418628569135769"
+        ixz="0.444749791683163"
+        iyy="1.1262466603104"
+        iyz="-0.00265596647432194"
+        izz="0.817835709756749" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_cachua/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_cachua/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="continuous">
+    <origin
+      xyz="-0.5 0.15 0"
+      rpy="0 -0.022487 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link_gripper">
+    <inertial>
+      <origin
+        xyz="0.648588925771887 0.578257530686136 0.269581239375089"
+        rpy="0 0 0" />
+      <mass
+        value="4.49087385212341" />
+      <inertia
+        ixx="0.0202967545713155"
+        ixy="-0.000199226938271995"
+        ixz="-3.39406175284582E-05"
+        iyy="0.0287483587037319"
+        iyz="-0.00041897994929202"
+        izz="0.0202415154053278" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_cachua/meshes/link_gripper.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://arm_cachua/meshes/link_gripper.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_gripper"
+    type="continuous">
+    <origin
+      xyz="-0.6 0.15 0"
+      rpy="0 0.011395 0" />
+    <parent
+      link="link3" />
+    <child
+      link="link_gripper" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+</robot>
