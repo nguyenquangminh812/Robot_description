@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="TayGapUet">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.15509 0.08915 0.10655"
+        rpy="0 0 0" />
+      <mass
+        value="27.154" />
+      <inertia
+        ixx="0.12831"
+        ixy="-0.00013182"
+        ixz="-1.115E-05"
+        iyy="0.11923"
+        iyz="0.00027715"
+        izz="0.096206" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TayGapUet/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TayGapUet/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="3.6563E-09 0.061786 0.15491"
+        rpy="0 0 0" />
+      <mass
+        value="40.19" />
+      <inertia
+        ixx="0.50815"
+        ixy="-1.6635E-09"
+        ixz="8.2183E-09"
+        iyy="0.50975"
+        iyz="-0.033417"
+        izz="0.12975" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TayGapUet/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TayGapUet/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="continuous">
+    <origin
+      xyz="0.15509 -0.10565 0.14236"
+      rpy="1.5708 0 -0.15434" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="-1.1835E-08 0.12413 0.20373"
+        rpy="0 0 0" />
+      <mass
+        value="118.94" />
+      <inertia
+        ixx="2.7618"
+        ixy="8.7235E-06"
+        ixz="-4.278E-07"
+        iyy="2.3197"
+        iyz="0.17283"
+        izz="0.86325" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TayGapUet/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TayGapUet/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="continuous">
+    <origin
+      xyz="0 0.094021 0.25"
+      rpy="0 -1.5409 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="4.3636E-08 0.077759 -3.2267E-07"
+        rpy="0 0 0" />
+      <mass
+        value="9.6164" />
+      <inertia
+        ixx="0.23881"
+        ixy="-1.1999E-05"
+        ixz="-5.2383E-08"
+        iyy="0.0041209"
+        iyz="1.1823E-05"
+        izz="0.23881" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TayGapUet/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://TayGapUet/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="continuous">
+    <origin
+      xyz="0 0 0.40562"
+      rpy="3.1416 -0.25389 3.1416" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+</robot>
