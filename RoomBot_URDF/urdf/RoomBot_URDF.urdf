@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="RoomBot_URDF">
+  <link
+    name="roombot_link0">
+    <inertial>
+      <origin
+        xyz="0.036828 0.067583 0.13162"
+        rpy="0 0 0" />
+      <mass
+        value="0.50828" />
+      <inertia
+        ixx="0.00061202"
+        ixy="9.3211E-05"
+        ixz="9.3204E-05"
+        iyy="0.00061205"
+        iyz="9.3212E-05"
+        izz="0.00061202" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RoomBot_URDF/meshes/roombot_link0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RoomBot_URDF/meshes/roombot_link0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="roombot_link1">
+    <inertial>
+      <origin
+        xyz="-0.052348 -0.052346 -0.052348"
+        rpy="0 0 0" />
+      <mass
+        value="0.50828" />
+      <inertia
+        ixx="0.00061204"
+        ixy="9.3203E-05"
+        ixz="9.3208E-05"
+        iyy="0.00061205"
+        iyz="9.3217E-05"
+        izz="0.00061204" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RoomBot_URDF/meshes/roombot_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RoomBot_URDF/meshes/roombot_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roombot_joint1"
+    type="continuous">
+    <origin
+      xyz="-0.041848 -0.052943 -0.011095"
+      rpy="-2.6649 -0.29383 2.6649" />
+    <parent
+      link="roombot_link0" />
+    <child
+      link="roombot_link1" />
+    <axis
+      xyz="0.57735 0.57735 0.57735" />
+  </joint>
+  <link
+    name="roombot_link2">
+    <inertial>
+      <origin
+        xyz="0.0131643398860214 -0.0313216974307582 0.0131643368693097"
+        rpy="0 0 0" />
+      <mass
+        value="0.508278610067439" />
+      <inertia
+        ixx="0.00061203082761765"
+        ixy="9.32084506042224E-05"
+        ixz="9.3212323577995E-05"
+        iyy="0.000612053069078505"
+        iyz="9.32146749457815E-05"
+        izz="0.00061206108912461" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RoomBot_URDF/meshes/roombot_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RoomBot_URDF/meshes/roombot_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roombot_joint2"
+    type="continuous">
+    <origin
+      xyz="0 -0.065512 -0.065512"
+      rpy="-3.1416 1.2154 -1.5708" />
+    <parent
+      link="roombot_link1" />
+    <child
+      link="roombot_link2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="roombot_link3">
+    <inertial>
+      <origin
+        xyz="0.027994 0.027996 0.027994"
+        rpy="0 0 0" />
+      <mass
+        value="0.50828" />
+      <inertia
+        ixx="0.00061205"
+        ixy="9.3208E-05"
+        ixz="9.3209E-05"
+        iyy="0.00061206"
+        iyz="9.3211E-05"
+        izz="0.00061205" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RoomBot_URDF/meshes/roombot_link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RoomBot_URDF/meshes/roombot_link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roombot_joint3"
+    type="continuous">
+    <origin
+      xyz="0.014829 -0.029659 0.014829"
+      rpy="2.3984 1.4515 -0.82765" />
+    <parent
+      link="roombot_link2" />
+    <child
+      link="roombot_link3" />
+    <axis
+      xyz="0.57735 0.57735 0.57735" />
+  </joint>
+  <link
+    name="roombot_link4">
+    <inertial>
+      <origin
+        xyz="0.013164 0.013166 -0.0994"
+        rpy="0 0 0" />
+      <mass
+        value="0.50828" />
+      <inertia
+        ixx="0.00061203"
+        ixy="9.3218E-05"
+        ixz="9.3204E-05"
+        iyy="0.00061207"
+        iyz="9.3213E-05"
+        izz="0.00061204" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RoomBot_URDF/meshes/roombot_link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RoomBot_URDF/meshes/roombot_link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roombot_joint4"
+    type="continuous">
+    <origin
+      xyz="0.014829 0.012265 0.014829"
+      rpy="-1.5708 0.099077 3.1416" />
+    <parent
+      link="roombot_link3" />
+    <child
+      link="roombot_link4" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="roombot_link5">
+    <inertial>
+      <origin
+        xyz="0.050686 0.050688 0.050686"
+        rpy="0 0 0" />
+      <mass
+        value="0.50828" />
+      <inertia
+        ixx="0.00061202"
+        ixy="9.3217E-05"
+        ixz="9.3206E-05"
+        iyy="0.00061204"
+        iyz="9.3209E-05"
+        izz="0.00061204" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RoomBot_URDF/meshes/roombot_link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://RoomBot_URDF/meshes/roombot_link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="roombot_joint5"
+    type="continuous">
+    <origin
+      xyz="0.037521 0.037521 -0.075043"
+      rpy="-0.93287 1.161 2.5037" />
+    <parent
+      link="roombot_link4" />
+    <child
+      link="roombot_link5" />
+    <axis
+      xyz="0.57735 0.57735 0.57735" />
+  </joint>
+</robot>
